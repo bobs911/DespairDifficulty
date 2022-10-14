@@ -1,6 +1,6 @@
-name: LearningAndData
+name: DespairDifficulty
 version: '${project.version}'
-main: learninganddata.learninganddata.LearningAndData
+main: despairdifficulty.despairdifficulty.DespairDifficulty
 api-version: 1.19
 authors: [ Herculuke ]
-description: Fun plugins
+description: The most impossible plugin to beat in survival Minecraft, you have two lives to beat the game, good luck!
