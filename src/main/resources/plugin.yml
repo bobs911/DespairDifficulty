@@ -1,0 +1,6 @@
+name: LearningAndData
+version: '${project.version}'
+main: learninganddata.learninganddata.LearningAndData
+api-version: 1.19
+authors: [ Herculuke ]
+description: Fun plugins
