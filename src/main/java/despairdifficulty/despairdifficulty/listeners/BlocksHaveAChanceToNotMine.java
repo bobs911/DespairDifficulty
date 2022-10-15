@@ -1,4 +1,4 @@
-package learninganddata.learninganddata.listeners;
+package despairdifficulty.despairdifficulty.listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;

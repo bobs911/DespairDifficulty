@@ -1,4 +1,4 @@
-package learninganddata.learninganddata.listeners;
+package despairdifficulty.despairdifficulty.listeners;
 
 import com.sun.jdi.CharType;
 import net.md_5.bungee.api.ChatMessageType;

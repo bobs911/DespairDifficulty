@@ -1,6 +1,7 @@
-package learninganddata.learninganddata.listeners;
+package despairdifficulty.despairdifficulty.listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -24,9 +25,10 @@ public class CreepersMultiply implements Listener {
             int summonx = htblkloc.getBlockX();
             int summony = htblkloc.getBlockY();
             int summonz = htblkloc.getBlockZ();
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper" + summonx + " " + summony + " " + summonz);
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper" + summonx + " " + summony + " " + summonz);
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper" + summonx + " " + summony + " " + summonz);
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + summonz);
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + (summonz + 3));
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + summony + " " + summonz);
+            getServer().broadcastMessage(ChatColor.GOLD + "Creepers Are Gonna Be A Problem!");
         }
 
     }
