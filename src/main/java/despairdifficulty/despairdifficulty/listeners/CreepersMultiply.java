@@ -19,12 +19,16 @@ public class CreepersMultiply implements Listener {
 
     @EventHandler
     public void ProjectilesLand(ExplosionPrimeEvent e){
+        //When a creeper explodes it will summon 6 more creepers around it (this could likely be abused, but is funny for new players)
         EntityType creepertest = e.getEntity().getType();
         if (creepertest == EntityType.CREEPER) {
             Location htblkloc = e.getEntity().getLocation();
             int summonx = htblkloc.getBlockX();
             int summony = htblkloc.getBlockY();
             int summonz = htblkloc.getBlockZ();
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + summonz);
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + (summonz + 3));
+            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + summony + " " + summonz);
             getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + summonz);
             getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + (summonz + 3));
             getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + summony + " " + summonz);

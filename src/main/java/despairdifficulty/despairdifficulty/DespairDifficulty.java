@@ -8,11 +8,11 @@ public final class DespairDifficulty extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        //Plugin Launch Message sends and Event Listeners Are Registered
+        System.out.println("The DESPAIR DIFFICULTY by Herculuke plugin has launched!");
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         int counter = 1;
-        System.out.println("The DESPAIR DIFFICULTY by Herculuke plugin has launched!");
         getServer().getPluginManager().registerEvents(new ExplosiveDuplication(), this);
         System.out.println("Explosive Duping is On");
         getServer().getPluginManager().registerEvents(new CreepersMultiply(), this);

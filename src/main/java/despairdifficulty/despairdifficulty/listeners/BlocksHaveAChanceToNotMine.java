@@ -11,7 +11,7 @@ import java.util.random.RandomGenerator;
 
 public class BlocksHaveAChanceToNotMine extends JavaPlugin implements Listener {
     public void BedExplodeOnEnter(PlayerHarvestBlockEvent e) {
-        //Makes Blocks Occasionally Say No
+        //Makes Blocks Occasionally Say No (Defaulted to after 15 blocks are broken and can be changed in config)
 
         int maxcount = getConfig().getInt("BlockCount");
         int livecount = getConfig().getInt("LiveCount");

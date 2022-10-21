@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class AllBedsExplode extends JavaPlugin implements Listener {
     public void BedExplodeOnEnter(PlayerBedEnterEvent e) {
-        //Beds Explode When You Enter Them
+        //Beds Explode When You Enter Them in every dimension
 
         Player p = e.getPlayer();
         double explodex = p.getLocation().getX();
