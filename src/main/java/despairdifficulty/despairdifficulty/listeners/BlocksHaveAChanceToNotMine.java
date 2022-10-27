@@ -12,6 +12,9 @@ import java.util.Random;
 import java.util.random.RandomGenerator;
 
 public class BlocksHaveAChanceToNotMine extends JavaPlugin implements Listener {
+    public BlocksHaveAChanceToNotMine(DespairDifficulty plugin) {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
     @EventHandler
     public void BedExplodeOnEnter(PlayerHarvestBlockEvent e) {
         //Makes Blocks Occasionally Say No (Defaulted to after 15 blocks are broken and can be changed in config)
