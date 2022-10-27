@@ -1,5 +1,6 @@
 package despairdifficulty.despairdifficulty.listeners;
 
+import despairdifficulty.despairdifficulty.DespairDifficulty;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
@@ -15,6 +16,7 @@ public class ExplosiveDuplication implements Listener {
 
     @EventHandler
     public void ProjectilesLand(ProjectileHitEvent e){
+        DespairDifficulty.log.info("ExplosiveDuplication");
         //Wherever a projectile lands it will explode and duplicate therefore triggering a chain reaction and crashing your world
         Location htblkloc = e.getHitBlock().getLocation();
         int explodex = htblkloc.getBlockX();

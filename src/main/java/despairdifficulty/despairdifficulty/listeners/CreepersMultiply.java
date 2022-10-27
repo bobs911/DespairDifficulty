@@ -1,5 +1,6 @@
 package despairdifficulty.despairdifficulty.listeners;
 
+import despairdifficulty.despairdifficulty.DespairDifficulty;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -19,19 +20,20 @@ public class CreepersMultiply implements Listener {
 
     @EventHandler
     public void ProjectilesLand(ExplosionPrimeEvent e){
+        DespairDifficulty.log.info("CreepersMultiply");
         //When a creeper explodes it will summon 6 more creepers around it (this could likely be abused, but is funny for new players)
         EntityType creepertest = e.getEntity().getType();
         if (creepertest == EntityType.CREEPER) {
             Location htblkloc = e.getEntity().getLocation();
-            int summonx = htblkloc.getBlockX();
-            int summony = htblkloc.getBlockY();
-            int summonz = htblkloc.getBlockZ();
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + summonz);
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + (summonz + 3));
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + summony + " " + summonz);
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + summonz);
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + (summony + 4) + " " + (summonz + 3));
-            getServer().dispatchCommand(Bukkit.getConsoleSender(), "summon creeper " + (summonx + 3) + " " + summony + " " + summonz);
+            int summonx = htblkloc.getBlockX() + 3;
+            int summony = htblkloc.getBlockY() + 4;
+            int summonz = htblkloc.getBlockZ() + 3;
+            Location duplicateCreeperLocation = new Location(e.getEntity().getWorld(), summonx, summony,summonz);
+            DespairDifficulty.log.info("BlocksHaveAChanceToNotMine");
+            int amountOfCreepersToSpawn = 6;
+            for (int i = 0; i < amountOfCreepersToSpawn; i++){
+               e.getEntity().getWorld().spawnEntity(duplicateCreeperLocation, EntityType.CREEPER);
+            }
             getServer().broadcastMessage(ChatColor.GOLD + "Creepers Are Gonna Be A Problem!");
         }
 
