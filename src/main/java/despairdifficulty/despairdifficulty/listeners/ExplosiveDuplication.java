@@ -12,8 +12,9 @@ import java.util.Locale;
 import static org.bukkit.Bukkit.getServer;
 
 public class ExplosiveDuplication implements Listener {
-
-
+    public ExplosiveDuplication(DespairDifficulty plugin) {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
     @EventHandler
     public void ProjectilesLand(ProjectileHitEvent e){
         DespairDifficulty.log.info("ExplosiveDuplication");

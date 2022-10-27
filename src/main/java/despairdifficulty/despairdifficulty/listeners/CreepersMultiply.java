@@ -16,7 +16,9 @@ import java.util.Locale;
 import static org.bukkit.Bukkit.getServer;
 
 public class CreepersMultiply implements Listener {
-
+    public CreepersMultiply(DespairDifficulty plugin) {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
 
     @EventHandler
     public void ProjectilesLand(ExplosionPrimeEvent e){
