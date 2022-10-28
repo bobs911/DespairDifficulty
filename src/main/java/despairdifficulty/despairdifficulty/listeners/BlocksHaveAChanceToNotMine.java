@@ -8,7 +8,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerHarvestBlockEvent;
-
 import java.io.IOException;
 
 public class BlocksHaveAChanceToNotMine implements Listener {
@@ -30,9 +29,5 @@ public class BlocksHaveAChanceToNotMine implements Listener {
             Bukkit.getServer().broadcastMessage(ChatColor.RED + "NO");
             e.setCancelled(true);
         }
-
-
-
-
     }
 }

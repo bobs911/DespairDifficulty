@@ -1,9 +1,9 @@
 package despairdifficulty.despairdifficulty;
 
 import despairdifficulty.despairdifficulty.listeners.*;
-import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -19,6 +19,7 @@ public final class DespairDifficulty extends JavaPlugin implements Listener {
         pm.registerEvents(this, this);
         //Plugin Launch Message sends and Event Listeners Are Registered
         log.info("The DESPAIR DIFFICULTY by Herculuke plugin has launched!");
+        getServer().getPluginManager().registerEvents(this, this);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
