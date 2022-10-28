@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class JoinMessage extends JavaPlugin implements Listener {
+public class JoinMessage implements Listener {
     public JoinMessage(DespairDifficulty plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
