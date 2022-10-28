@@ -14,6 +14,7 @@ import javax.swing.text.html.parser.Entity;
 import java.util.Locale;
 
 import static org.bukkit.Bukkit.getServer;
+import static org.bukkit.Bukkit.getWorld;
 
 public class CreepersMultiply implements Listener {
     public CreepersMultiply(DespairDifficulty plugin) {

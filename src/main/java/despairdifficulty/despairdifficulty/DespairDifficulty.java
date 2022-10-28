@@ -2,7 +2,10 @@ package despairdifficulty.despairdifficulty;
 
 import despairdifficulty.despairdifficulty.listeners.*;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -14,6 +17,7 @@ public final class DespairDifficulty extends JavaPlugin implements Listener {
     public void onEnable() {
         //Plugin Launch Message sends and Event Listeners Are Registered
         log.info("The DESPAIR DIFFICULTY by Herculuke plugin has launched!");
+        getServer().getPluginManager().registerEvents(this, this);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         new ExplosiveDuplication(this);
@@ -27,7 +31,6 @@ public final class DespairDifficulty extends JavaPlugin implements Listener {
         new BlocksHaveAChanceToNotMine(this);
         log.info("Blocks Not Mining Is On");
     }
-
 
     @Override
     public void onDisable() {
